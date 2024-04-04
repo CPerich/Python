@@ -1,0 +1,30 @@
+import tkinter as tk
+
+def submit():
+    name = name_entry.get()
+    age = age_entry.get()
+    print("Name:", name)
+    print("Age:", age)
+    # Aquí puedes realizar otras acciones con los datos del formulario
+
+# Crear la ventana principal
+root = tk.Tk()
+root.title("Formulario")
+
+# Crear etiquetas y entradas para nombre y edad
+name_label = tk.Label(root, text="Nombre:")
+name_label.grid(row=0, column=0, padx=10, pady=5)
+name_entry = tk.Entry(root)
+name_entry.grid(row=0, column=1, padx=10, pady=5)
+
+age_label = tk.Label(root, text="Edad:")
+age_label.grid(row=1, column=0, padx=10, pady=5)
+age_entry = tk.Entry(root)
+age_entry.grid(row=1, column=1, padx=10, pady=5)
+
+# Botón de enviar
+submit_button = tk.Button(root, text="Enviar", command=submit)
+submit_button.grid(row=2, column=0, columnspan=2, padx=10, pady=10)
+
+# Ejecutar el bucle principal
+root.mainloop()
