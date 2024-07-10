@@ -1,0 +1,17 @@
+// Función para calcular el área de un triángulo
+function calcularAreaTriangulo(base, altura) {
+    var area = (base * altura) / 2;
+    return area;
+}
+
+// Solicitamos al usuario que ingrese la base y la altura del triángulo
+var baseUsuario = prompt("Ingresa la base del triángulo:");
+var alturaUsuario = prompt("Ingresa la altura del triángulo:");
+
+// Convertimos los valores ingresados de cadena a número (flotante)
+baseUsuario = parseFloat(baseUsuario);
+alturaUsuario = parseFloat(alturaUsuario);
+
+// Llamamos a la función calcularAreaTriangulo con los valores ingresados y mostramos el resultado
+var areaTriangulo = calcularAreaTriangulo(baseUsuario, alturaUsuario);
+console.log("El área del triángulo con base " + baseUsuario + " y altura " + alturaUsuario + " es: " + areaTriangulo);
